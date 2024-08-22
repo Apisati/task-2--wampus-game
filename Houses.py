@@ -1,23 +1,19 @@
 class Cave:
-    def __init__(self, cave_name): #constructor
-            self.name = cave_name
-            self.description = None
-            self.linked_caves = {} #creates an e,pty dictionairy
-            self.character = None
-
+    def __init__(self, cave_name):
+        self.name = cave_name
+        self.description = None
+        self.linked_caves = {}
+        self.character = None
 
     def get_character(self):
         return self.character
 
-    #method to set the description of cave
-    def set_character(self):self, character):
-        self.description = cave_character
+    def set_character(self, character):
+        self.character = character
 
-#to get Description of cave
-    def get_character(self):
-        return self.character
+    def get_description(self):
+        return self.description
 
-    #method to set the description of cave
     def set_description(self, cave_description):
         self.description = cave_description
 
@@ -27,9 +23,8 @@ class Cave:
     def get_name(self):
         return self.name
 
-    def set_name(self, Cavename):
-        self.name = Cavename
-
+    def set_name(self, cave_name):
+        self.name = cave_name
 
     def link_cave(self, cave_to_link, direction):
         self.linked_caves[direction] = cave_to_link
@@ -41,17 +36,8 @@ class Cave:
             print("You can't go that way")
             return self
 
-
     def get_details(self):
         self.describe()
         for direction in self.linked_caves:
             cave = self.linked_caves[direction]
-            print( "The " + cave.get_name() + " is " + direction)
-
-
-    def __init__(self, cave_name):
-        self.name = cave_name
-        self.description = None
-        self.linked_caves = {}
-        # add the character attribute here
-        self.character = None
+            print("The " + cave.get_name() + " is " + direction)

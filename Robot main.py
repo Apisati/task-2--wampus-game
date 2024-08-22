@@ -1,5 +1,5 @@
-from Cave import Cave
-from character import Enemy
+from Houses import Cave
+from new game characters import Enemy
 cavern = Cave('Cavern')
 cavern.set_description("A dank and dirty cave ")
 grotto =Cave('Grotto')
@@ -12,9 +12,9 @@ dungeon.link_cave(cavern,"north")
 cavern.link_cave(dungeon,"south")
 grotto.link_cave(dungeon,"east")
 
-harry = Enemy("Harry", "A smelly Wumpus")
-harry.set_conversation("Hangry…Hanggrry")
-harry.set_weakness("vegemite")
+Robot = Enemy("Robot#2347", "A rigid bot")
+Robot.set_conversation("Hello.. time to die")
+Robot.set_weakness("Water")
 
 
 
