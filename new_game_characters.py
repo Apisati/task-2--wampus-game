@@ -36,7 +36,6 @@ class Enemy(Character):
         return self.weakness
 
     def set_weakness(self, item):
-        # item is a string value that weakens the enemy
         self.weakness = item
 
     def fight(self, combat_item):
@@ -44,5 +43,5 @@ class Enemy(Character):
             print("You fend " + self.name + " off with the " + combat_item)
             return True
         else:
-            print(self.name + " swallows you, little wimp")
+            print(self.name + " dies.")
             return False

@@ -4,6 +4,7 @@ class Cave:
         self.description = None
         self.linked_caves = {}
         self.character = None
+        self.weapon = None
 
     def get_character(self):
         return self.character
@@ -41,3 +42,9 @@ class Cave:
         for direction in self.linked_caves:
             cave = self.linked_caves[direction]
             print("The " + cave.get_name() + " is " + direction)
+
+    def get_weapon(self):
+        return self.weapon
+
+    def set_weapon(self, weapon):
+        self.weapon = weapon
